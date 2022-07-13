@@ -4,11 +4,11 @@ import { DownPageComponent } from './pages/down-page/down-page.component';
 
 const routes: Routes = [
   { path: '', component: DownPageComponent },
-  { path: '**', redirectTo: '' },
+  { path: '**', redirectTo: '' }
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule],
+  exports: [RouterModule]
 })
 export class DownRoutingModule {}

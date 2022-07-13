@@ -7,6 +7,6 @@ import { pages } from './pages';
 
 @NgModule({
   declarations: [...components, ...pages],
-  imports: [CommonModule, DownRoutingModule],
+  imports: [CommonModule, DownRoutingModule]
 })
 export class DownModule {}

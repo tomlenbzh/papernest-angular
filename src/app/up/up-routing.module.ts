@@ -4,11 +4,11 @@ import { UpPageComponent } from './pages/up/up-page.component';
 
 const routes: Routes = [
   { path: '', component: UpPageComponent },
-  { path: '**', redirectTo: '' },
+  { path: '**', redirectTo: '' }
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule],
+  exports: [RouterModule]
 })
 export class UpRoutingModule {}

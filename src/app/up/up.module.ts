@@ -6,6 +6,6 @@ import { pages } from './pages';
 
 @NgModule({
   declarations: [...pages, ...components],
-  imports: [CommonModule, UpRoutingModule],
+  imports: [CommonModule, UpRoutingModule]
 })
 export class UpModule {}

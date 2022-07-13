@@ -8,7 +8,7 @@ describe('DownPageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [DownPageComponent, DownComponent],
+      declarations: [DownPageComponent, DownComponent]
     }).compileComponents();
   });
 
