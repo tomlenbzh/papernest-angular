@@ -12,6 +12,10 @@ const children: Routes = [
     loadChildren: () => import('./down/down.module').then((m) => m.DownModule)
   },
   {
+    path: 'reset',
+    loadChildren: () => import('./reset/reset.module').then((m) => m.ResetModule)
+  },
+  {
     path: '',
     pathMatch: 'full',
     redirectTo: 'up'
