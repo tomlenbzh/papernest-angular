@@ -5,26 +5,26 @@ import { MainLayoutPageComponent } from './core/pages/main-layout-page/main-layo
 const children: Routes = [
   {
     path: 'up',
-    loadChildren: () => import('./up/up.module').then((m) => m.UpModule),
+    loadChildren: () => import('./up/up.module').then((m) => m.UpModule)
   },
   {
     path: 'down',
-    loadChildren: () => import('./down/down.module').then((m) => m.DownModule),
+    loadChildren: () => import('./down/down.module').then((m) => m.DownModule)
   },
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: 'up',
-  },
+    redirectTo: 'up'
+  }
 ];
 
 const routes: Routes = [
   { path: '', component: MainLayoutPageComponent, children },
-  { path: '**', redirectTo: 'up' },
+  { path: '**', redirectTo: 'up' }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
+  exports: [RouterModule]
 })
 export class AppRoutingModule {}

@@ -8,7 +8,7 @@ describe('UpPageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [UpPageComponent, UpComponent],
+      declarations: [UpPageComponent, UpComponent]
     }).compileComponents();
   });
 

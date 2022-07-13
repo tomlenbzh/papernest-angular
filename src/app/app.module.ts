@@ -7,6 +7,6 @@ import { CoreModule } from './core/core.module';
   declarations: [],
   imports: [CoreModule.forRoot(), AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent]
 })
 export class AppModule {}

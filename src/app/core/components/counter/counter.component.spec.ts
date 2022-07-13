@@ -7,7 +7,7 @@ describe('CounterComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [CounterComponent],
+      declarations: [CounterComponent]
     }).compileComponents();
   });
 

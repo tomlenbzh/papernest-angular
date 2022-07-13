@@ -10,12 +10,8 @@ describe('MainLayoutPageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [
-        MainLayoutPageComponent,
-        MainLayoutComponent,
-        CounterComponent,
-      ],
-      imports: [RouterTestingModule],
+      declarations: [MainLayoutPageComponent, MainLayoutComponent, CounterComponent],
+      imports: [RouterTestingModule]
     }).compileComponents();
   });
 
