@@ -20,7 +20,7 @@
           "error",
           {
             "type": "attribute",
-            "prefix": "app",
+            "prefix": "papernest",
             "style": "camelCase"
           }
         ],

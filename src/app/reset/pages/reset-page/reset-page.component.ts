@@ -1,15 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'papernest-reset-page',
   templateUrl: './reset-page.component.html',
   styleUrls: ['./reset-page.component.scss']
 })
-export class ResetPageComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-}
+export class ResetPageComponent {}
