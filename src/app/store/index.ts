@@ -1,6 +1,7 @@
 import { ActionReducerMap, MetaReducer } from '@ngrx/store';
 import { environment } from '../../environments/environment';
-import { counterReducer, CounterState } from './counter/counter.reducer';
+import { CounterState } from '../utils/models/counter-state.interface';
+import { counterReducer } from './counter/counter.reducer';
 
 export interface AppState {
   counter: CounterState;

@@ -1,4 +1,18 @@
-<p>COUNTER: {{ counter }}</p>
-<p>INCREMENT: {{ increment }}</p>
-<p>ACTIONS: {{ actions }}</p>
-<p>COLORS: {{ color }}</p>
+<div class="counter">{{ counter }}</div>
+
+<div class="counter-info">
+  <div class="increment">
+    <span class="label">INCREMENT: </span>
+    <span class="value">+{{ increment }}</span>
+  </div>
+
+  <div class="actions">
+    <span class="label">ACTIONS: </span>
+    <span class="value">{{ actions }}</span>
+  </div>
+
+  <div class="color">
+    <span class="label">COLOR: </span>
+    <span class="value">{{ color }}</span>
+  </div>
+</div>
