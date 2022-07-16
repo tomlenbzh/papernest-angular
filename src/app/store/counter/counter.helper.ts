@@ -2,14 +2,23 @@ import { Injectable } from '@angular/core';
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { AppState } from 'src/app/store';
-import { selectActions, selectColor, selectCounter, selectIncrement } from './counter.selectors';
+import { selectActions, selectColor, selectCounter, selectIncrement, selectState } from './counter.selectors';
 import * as CounterActions from './counter.actions';
+import { CounterState } from 'src/app/utils/models/counter-state.interface';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CounterHelper {
   constructor(private store: Store<AppState>) {}
+
+  /**
+   * State getter helper methods.
+   */
+
+  state(): Observable<CounterState> {
+    return this.store.pipe(select(selectState));
+  }
 
   counter(): Observable<number> {
     return this.store.pipe(select(selectCounter));
@@ -27,11 +36,20 @@ export class CounterHelper {
     return this.store.pipe(select(selectColor));
   }
 
-  incrementCounter(counter: number, increment: number, actions: number): void {
-    this.store.dispatch(CounterActions.IncrementCounter({ counter, increment, actions }));
+  /**
+   * State management helper methods.
+   */
+
+  incrementCounter(): void {
+    this.store.dispatch(CounterActions.IncrementCounter());
   }
 
-  decrementCounter(counter: number, increment: number, actions: number): void {
-    this.store.dispatch(CounterActions.IncrementCounter({ counter, increment, actions }));
+  decrementCounter(): void {
+    this.store.dispatch(CounterActions.DecrementCounter());
+  }
+
+  presetState(state: CounterState): void {
+    const { counter, increment, actions, color } = state;
+    this.store.dispatch(CounterActions.PresetState({ counter, increment, actions, color }));
   }
 }

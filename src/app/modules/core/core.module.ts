@@ -13,6 +13,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { CounterHelper } from '../../store/counter/counter.helper';
 import { StoreRouterConnectingModule, RouterState } from '@ngrx/router-store';
+import { CounterEffects } from 'src/app/store/counter/counter.effects';
 
 @NgModule({
   declarations: [AppComponent, ...components, ...pages],
@@ -20,10 +21,10 @@ import { StoreRouterConnectingModule, RouterState } from '@ngrx/router-store';
     CommonModule,
     BrowserModule.withServerTransition({ appId: 'app' }),
     RouterModule,
-    StoreModule.forRoot(reducers, { metaReducers })
-    // !environment.production ? StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }) : [],
-    // StoreRouterConnectingModule.forRoot({ routerState: RouterState.Minimal }),
-    // EffectsModule.forRoot([])
+    StoreModule.forRoot(reducers, { metaReducers }),
+    !environment.production ? StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }) : [],
+    StoreRouterConnectingModule.forRoot({ routerState: RouterState.Minimal }),
+    EffectsModule.forRoot([CounterEffects])
   ],
   providers: [CounterHelper]
 })

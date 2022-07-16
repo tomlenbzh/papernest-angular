@@ -1,3 +1,5 @@
-<papernest-default-button [label]="'INCREMENT !'" [icon]="'add'"></papernest-default-button>
-
-<!-- <papernest-icon-button [icon]="'menu'"></papernest-icon-button> -->
+<papernest-default-button
+  [label]="'INCREMENT !'"
+  [icon]="'add'"
+  (clicked)="incrementCounter()"
+></papernest-default-button>

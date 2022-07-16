@@ -1,17 +1,25 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { MockStore, provideMockStore } from '@ngrx/store/testing';
 import { SharedModule } from 'src/app/modules/shared/shared.module';
+import { CounterHelper } from 'src/app/store/counter/counter.helper';
 import { DownComponent } from '../../components/down/down.component';
 import { DownPageComponent } from './down-page.component';
 
 describe('DownPageComponent', () => {
   let component: DownPageComponent;
   let fixture: ComponentFixture<DownPageComponent>;
+  let store: MockStore;
+
+  const initialState = { counter: null };
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [DownPageComponent, DownComponent],
-      imports: [SharedModule]
+      imports: [SharedModule],
+      providers: [provideMockStore({ initialState }), CounterHelper]
     }).compileComponents();
+
+    store = TestBed.inject(MockStore);
   });
 
   beforeEach(() => {

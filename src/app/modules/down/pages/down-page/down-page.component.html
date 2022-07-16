@@ -1,1 +1,7 @@
-<papernest-down></papernest-down>
+<papernest-down
+  [counter]="counter$ | async"
+  [increment]="increment$ | async"
+  [actions]="actions$ | async"
+  [color]="color$ | async"
+  (decremented)="decrementCounter()"
+></papernest-down>
