@@ -1,18 +1,20 @@
-<div class="counter">{{ counter }}</div>
+<div class="counter-container">
+  <div class="counter" [textContent]="counter"></div>
 
-<div class="counter-info">
-  <div class="increment">
-    <span class="label">INCREMENT: </span>
-    <span class="value">+{{ increment }}</span>
-  </div>
+  <div class="counter-info">
+    <div class="increment">
+      <span class="label" [textContent]="'COUNTER.INCREMENT_VALUE' | translate"></span>
+      <span class="value" [textContent]="increment"></span>
+    </div>
 
-  <div class="actions">
-    <span class="label">ACTIONS: </span>
-    <span class="value">{{ actions }}</span>
-  </div>
+    <div class="actions">
+      <span class="label" [textContent]="'COUNTER.ACTIONS_NUMBER' | translate"></span>
+      <span class="value" [textContent]="actions"></span>
+    </div>
 
-  <div class="color">
-    <span class="label">COLOR: </span>
-    <span class="value">{{ color }}</span>
+    <div class="color">
+      <span class="label" [textContent]="'COUNTER.COLOR' | translate"></span>
+      <span class="value" [textContent]="color"></span>
+    </div>
   </div>
 </div>

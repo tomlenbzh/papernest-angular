@@ -1,4 +1,6 @@
 <div class="page-container" [ngClass]="colorClass">
+  <papernest-navigation></papernest-navigation>
+
   <papernest-counter
     [counter]="counter"
     [increment]="increment"
@@ -7,6 +9,4 @@
   ></papernest-counter>
 
   <router-outlet></router-outlet>
-
-  <papernest-navigation></papernest-navigation>
 </div>

@@ -1,0 +1,48 @@
+{
+  "COUNTER": {
+    "INCREMENT_VALUE": "Coef d'incrementation / décrementation : ",
+    "ACTIONS_NUMBER": "Nombre d'actions effectuées : ",
+    "COLOR": "Couleur : "
+  },
+  "RULES": {
+    "RULE1": "Lorsque le bouton d'incrémentation est cliqué, le compteur augmente de 1",
+    "RULE2": "Lorsque le bouton de décrémentation est cliqué, le compteur diminue de 1",
+    "RULE3": "Lorsque le compteur atteint 10, la couleur du fond devient #e74c3c",
+    "RULE4": "Lorsque le compteur atteint -10, la couleur du fond devient #27ae60",
+    "RULE5": "Le coefficient est multiplié par 2 toutes les 30 actions"
+  },
+  "UP": {
+    "LABEL": "Incrémenter le compteur",
+    "TOOLTIP": "Cliquez sur ce bouton pour incrémenter la valeur du compteur"
+  },
+  "DOWN": {
+    "LABEL": "Décrémenter le compteur",
+    "TOOLTIP": "Cliquez sur ce bouton pour décrémenter la valeur du compteur"
+  },
+  "NAVIGATION": {
+    "UP": "/up",
+    "UP_TOOLTIP": "Naviguer sur la page /up",
+    "DOWN": "/down",
+    "DOWN_TOOLTIP": "Naviguer sur la page /down",
+    "RESET": "/reset",
+    "RESET_TOOLTIP": "Naviguer sur la page /reset"
+  },
+  "RESET": {
+    "TITLE": "Vous souhaitez reinitialiser le compteur ?",
+    "RULE": "Attention ! Seuls les utilisateurs ayant plus de 18 ans peuvent effectuer cette action !",
+    "FORM": {
+      "LABEL": "Quelle est votre date de naissance ?",
+      "ERRORS": {
+        "REQUIRED": "Votre date de naissance est requise",
+        "UNDERAGED": "Vous devez avoir plus de 18 ans"
+      }
+    },
+    "SUBMIT": "Réinitialiser",
+    "SUBMIT_TOOLTIP": "En cliquant sur ce bouton, le compteur sera réinitialisé"
+  },
+  "COLORS": {
+    "WHITE": "Blanc",
+    "RED": "Rouge",
+    "GREEN": "Vert"
+  }
+}

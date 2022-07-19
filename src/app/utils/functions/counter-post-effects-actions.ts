@@ -42,10 +42,10 @@ export const getUpdateIncrementAction = (increment: number, actions: number): Up
  * @returns     { UpdateColorType }
  */
 export const getUpdateColorAction = (counter: number, color: string): UpdateColorType => {
-  if (counter >= 10 && color !== BgColors.BG_RED) return CounterActions.UpdateColor({ color: BgColors.BG_RED });
-  if (counter <= -10 && color !== BgColors.BG_GREEN) return CounterActions.UpdateColor({ color: BgColors.BG_GREEN });
-  if (counter < 10 && counter > -10 && color !== BgColors.BG_WHITE)
-    return CounterActions.UpdateColor({ color: BgColors.BG_WHITE });
+  if (counter >= 10 && color !== BgColors.RED) return CounterActions.UpdateColor({ color: BgColors.RED });
+  if (counter <= -10 && color !== BgColors.GREEN) return CounterActions.UpdateColor({ color: BgColors.GREEN });
+  if (counter < 10 && counter > -10 && color !== BgColors.WHITE)
+    return CounterActions.UpdateColor({ color: BgColors.WHITE });
 
   return null;
 };

@@ -18,15 +18,15 @@ export class ResetComponent implements OnInit {
     return this.form && this.form.get(this.controlNames.BIRTHDAY);
   }
 
-  get errorMessage(): string | null {
-    let value: string | null = null;
+  get errorMessage(): string {
+    let value: string = '';
 
     if (this.birthday?.errors!['required']) {
-      value = 'Your birthday is required'; // TODO RETURN TRANSLATION KEY
+      value = 'RESET.FORM.ERRORS.REQUIRED'; // TODO RETURN TRANSLATION KEY
     }
 
     if (this.birthday?.errors!['minimumAge']) {
-      value = `You need to be over ${this.birthday?.errors!['minimumAge']['requiredAge']}`; // TODO RETURN TRANSLATION KEY
+      value = `RESET.FORM.ERRORS.UNDERAGED`; // TODO RETURN TRANSLATION KEY
     }
 
     return value;

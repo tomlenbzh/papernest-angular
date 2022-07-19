@@ -1,0 +1,48 @@
+{
+  "COUNTER": {
+    "INCREMENT_VALUE": "Increment / decrement coef: ",
+    "ACTIONS_NUMBER": "Number of actions triggered : ",
+    "COLOR": "Color : "
+  },
+  "RULES": {
+    "RULE1": "When the increment button is clicked, the counter increases by 1",
+    "RULE2": "When the decrement button is clicked, the counter decreases by 1",
+    "RULE3": "When the counter reaches 10, the background color changes to #e74c3c",
+    "RULE4": "When the counter reaches -10, the background color changes to #27ae60",
+    "RULE5": "The increment / decrement coef is multiplied by 2 every 30 actions"
+  },
+  "UP": {
+    "LABEL": "Increment the counter",
+    "TOOLTIP": "Click on this button to increment the counter's value"
+  },
+  "DOWN": {
+    "LABEL": "Decrement the counter",
+    "TOOLTIP": "Click on this button to decrement the counter's value"
+  },
+  "NAVIGATION": {
+    "UP": "/up",
+    "UP_TOOLTIP": "Naviguate to /up page",
+    "DOWN": "/down",
+    "DOWN_TOOLTIP": "Naviguate to /down page",
+    "RESET": "/reset",
+    "RESET_TOOLTIP": "Naviguate to /reset page"
+  },
+  "RESET": {
+    "TITLE": "Want to reinitialize the counter ?",
+    "RULE": "Warning ! Only users that are over the age of 18 are allowed to reinitialize the counter",
+    "FORM": {
+      "LABEL": "What is your birth date ?",
+      "ERRORS": {
+        "REQUIRED": "Your birth date is required",
+        "UNDERAGED": "You must be over 10"
+      }
+    },
+    "SUBMIT": "Reinitialize",
+    "SUBMIT_TOOLTIP": "By clicking this button, the counter will be reinitialized"
+  },
+  "COLORS": {
+    "WHITE": "White",
+    "RED": "Red",
+    "GREEN": "Green"
+  }
+}

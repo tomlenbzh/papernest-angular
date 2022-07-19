@@ -4,10 +4,11 @@ import { CommonModule } from '@angular/common';
 import { DownRoutingModule } from './down-routing.module';
 import { components } from './components';
 import { pages } from './pages';
-import { SharedModule } from '../shared/shared.module';
+import { TranslateModule } from '@ngx-translate/core';
+import { MaterialModule } from '../material.module';
 
 @NgModule({
   declarations: [...components, ...pages],
-  imports: [CommonModule, DownRoutingModule, SharedModule]
+  imports: [CommonModule, DownRoutingModule, TranslateModule.forChild(), MaterialModule]
 })
 export class DownModule {}

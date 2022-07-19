@@ -1,13 +1,20 @@
 <form class="reset-form" [formGroup]="form" (ngSubmit)="submitForm()">
-  <p>Only people above the age of 18 can reset the counter</p>
+  <h2 [textContent]="'RESET.TITLE' | translate"></h2>
+  <p [textContent]="'RESET.RULE' | translate"></p>
 
   <mat-form-field appearance="outline">
-    <mat-label for="birthday">Quelle est votre date d'anniversaire ?</mat-label>
+    <mat-label for="birthday" [textContent]="'RESET.FORM.LABEL' | translate"></mat-label>
     <input type="date" matInput id="birthday" [formControlName]="controlNames.BIRTHDAY" />
-    <mat-error *ngIf="birthday?.invalid">{{ errorMessage }}</mat-error>
+    <mat-error *ngIf="birthday?.invalid" [textContent]="'errorMessage' | translate"></mat-error>
   </mat-form-field>
 
   <div class="form-actions">
-    <button mat-raised-button type="submit" color="accent">Reset counter</button>
+    <button
+      mat-raised-button
+      type="submit"
+      color="accent"
+      [textContent]="'RESET.SUBMIT' | translate"
+      [matTooltip]="'RESET.SUBMIT_TOOLTIP' | translate"
+    ></button>
   </div>
 </form>

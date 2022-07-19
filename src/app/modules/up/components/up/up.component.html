@@ -1,5 +1,9 @@
-<papernest-default-button
-  [label]="'INCREMENT !'"
-  [icon]="'add'"
-  (clicked)="incrementCounter()"
-></papernest-default-button>
+<button
+  mat-raised-button
+  (click)="incrementCounter()"
+  [matTooltip]="'UP.TOOLTIP' | translate"
+  matTooltipPosition="below"
+>
+  <mat-icon aria-hidden="false">add</mat-icon>
+  {{ 'UP.LABEL' | translate }}
+</button>
