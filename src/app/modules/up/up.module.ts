@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { UpRoutingModule } from './up-routing.module';
 import { components } from './components';
 import { pages } from './pages';
-import { CounterHelper } from 'src/app/store/counter/counter.helper';
+import { CounterHelper } from '@store/counter/counter.helper';
 import { TranslateModule } from '@ngx-translate/core';
 import { MaterialModule } from '../material.module';
 

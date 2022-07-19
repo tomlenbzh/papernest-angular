@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { CounterHelper } from 'src/app/store/counter/counter.helper';
-import { CounterParams } from 'src/app/utils/models/counter-params.interface';
+import { CounterHelper } from '@store/counter/counter.helper';
 
 @Component({
   selector: 'papernest-up-page',
@@ -23,6 +22,9 @@ export class UpPageComponent implements OnInit {
     this.color$ = this.counterHelper.color();
   }
 
+  /**
+   * Increases the counter's value.
+   */
   incrementCounter(): void {
     this.counterHelper.incrementCounter();
   }

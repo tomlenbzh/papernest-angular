@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { CounterHelper } from 'src/app/store/counter/counter.helper';
+import { CounterHelper } from '@store/counter/counter.helper';
 
 @Component({
   selector: 'papernest-down-page',
@@ -22,6 +22,9 @@ export class DownPageComponent implements OnInit {
     this.color$ = this.counterHelper.color();
   }
 
+  /**
+   * Decreases the counter's value.
+   */
   decrementCounter(): void {
     this.counterHelper.decrementCounter();
   }

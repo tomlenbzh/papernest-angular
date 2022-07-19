@@ -1,5 +1,5 @@
 import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
-import { BgColors } from 'src/app/utils/constants/bg-colors';
+import { BgColors } from '@utils/constants/bg-colors';
 
 @Component({
   selector: 'papernest-main-layout',

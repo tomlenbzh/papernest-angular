@@ -3,7 +3,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MockStore, provideMockStore } from '@ngrx/store/testing';
 import { TranslateModule } from '@ngx-translate/core';
-import { MaterialModule } from 'src/app/modules/material.module';
+import { MaterialModule } from '@modules/material.module';
 import { ResetComponent } from '../../components/reset/reset.component';
 import { ResetPageComponent } from './reset-page.component';
 

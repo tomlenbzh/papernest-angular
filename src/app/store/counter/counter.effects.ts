@@ -3,8 +3,8 @@ import { Actions, concatLatestFrom, createEffect, ofType } from '@ngrx/effects';
 import { switchMap } from 'rxjs/operators';
 import { CounterActionTypes } from './counter.actions-types';
 import { CounterHelper } from './counter.helper';
-import { CounterState } from 'src/app/utils/models/counter-state.interface';
-import { getPostEffectActions } from 'src/app/utils/functions/counter-post-effects-actions';
+import { CounterState } from '@utils/models/counter-state.interface';
+import { getPostEffectActions } from '@utils/functions/counter-post-effects-actions';
 
 @Injectable()
 export class CounterEffects {

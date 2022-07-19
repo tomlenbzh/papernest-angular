@@ -1,8 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { MockStore, provideMockStore } from '@ngrx/store/testing';
 import { TranslateModule } from '@ngx-translate/core';
-import { MaterialModule } from 'src/app/modules/material.module';
-import { CounterHelper } from 'src/app/store/counter/counter.helper';
+import { MaterialModule } from '@modules/material.module';
+import { CounterHelper } from '@store/counter/counter.helper';
 import { DownComponent } from '../../components/down/down.component';
 import { DownPageComponent } from './down-page.component';
 

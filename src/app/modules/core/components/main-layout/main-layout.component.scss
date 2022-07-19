@@ -1,16 +1,18 @@
+@import '../../../../../scss/variables.scss';
+
 .page-container {
   height: 100%;
   text-align: center;
 
   &.--white {
-    background-color: #ffffff; // TODO > ADD VARIABLE
+    background-color: $white;
   }
 
   &.--red {
-    background-color: #e74c3c; // TODO > ADD VARIABLE
+    background-color: $red;
   }
 
   &.--green {
-    background-color: #27ae60; // TODO > ADD VARIABLE
+    background-color: $green;
   }
 }

@@ -1,6 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { isNullOrUndefined } from 'src/app/utils/functions/check-has-null-values';
-import { CounterParams } from 'src/app/utils/models/counter-params.interface';
+import { isNullOrUndefined } from '@utils/functions/check-has-null-values';
 
 @Component({
   selector: 'papernest-up',

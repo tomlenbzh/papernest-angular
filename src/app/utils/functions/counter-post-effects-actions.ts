@@ -1,6 +1,6 @@
 import { BgColors } from '../constants/bg-colors';
-import * as CounterActions from '../../store/counter/counter.actions';
 import { UpdateColorType, UpdateIncrementType } from '../models/counter-post-actions-types';
+import * as CounterActions from '@store/counter/counter.actions';
 
 /**
  * Returns an array of actions to be executed after the counter was incremented / decremented.

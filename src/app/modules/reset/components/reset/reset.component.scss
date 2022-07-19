@@ -1,9 +1,11 @@
+@import '../../../../../scss/variables.scss';
+
 .reset-form {
   width: 400px;
   padding: 20px;
   margin: 50px auto 20px;
-  background: white; // TODO VARIABLE
-  box-shadow: 1px 2px 10px #414141; // TODO VARIABLE
+  background: $white;
+  box-shadow: 1px 2px 10px $shadow;
   border-radius: 5px;
 
   .mat-form-field {

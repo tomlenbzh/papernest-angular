@@ -1,6 +1,6 @@
 import { createSelector } from '@ngrx/store';
 import { AppState } from 'src/app/store';
-import { CounterState } from 'src/app/utils/models/counter-state.interface';
+import { CounterState } from '@utils/models/counter-state.interface';
 
 export const counterFeature = (state: AppState) => state.counter;
 export const selectCounter = createSelector(counterFeature, (state: CounterState) => state.counter);

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
-import { ACCEPTED_LANGUAGES, LANG } from 'src/app/utils/constants/languages';
+import { ACCEPTED_LANGUAGES, LANG } from '@utils/constants/languages';
 
 @Component({
   selector: 'papernest-navigation',
@@ -29,6 +29,11 @@ export class NavigationComponent {
     this.router.events.subscribe((e) => e instanceof NavigationEnd && (this.currentUrl = e.urlAfterRedirects));
   }
 
+  /**
+   * Changes the application's language.
+   *
+   * @param     { lang }      lang
+   */
   changeLanguage(lang: LANG): void {
     this.translate.use(lang);
   }

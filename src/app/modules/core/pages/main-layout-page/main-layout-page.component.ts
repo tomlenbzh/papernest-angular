@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { CounterHelper } from 'src/app/store/counter/counter.helper';
-import { PAPERNEST_LOCALSTORAGE_STATE_KEY } from 'src/app/utils/constants/localstorage';
-import { getFromlocalstorage } from 'src/app/utils/functions/manage-localstorage';
-import { CounterState } from 'src/app/utils/models/counter-state.interface';
+import { CounterHelper } from '@store/counter/counter.helper';
+import { PAPERNEST_LOCALSTORAGE_STATE_KEY } from '@utils/constants/localstorage';
+import { getFromlocalstorage } from '@utils/functions/manage-localstorage';
+import { CounterState } from '@utils/models/counter-state.interface';
 
 @Component({
   selector: 'papernest-main-layout-page',
@@ -27,6 +27,9 @@ export class MainLayoutPageComponent implements OnInit {
     this.color$ = this.counterHelper.color();
   }
 
+  /**
+   * Fetches data from localstorage and if it exists, forces the state value.
+   */
   private presetState(): void {
     const storageValue: string | null = getFromlocalstorage(PAPERNEST_LOCALSTORAGE_STATE_KEY);
 

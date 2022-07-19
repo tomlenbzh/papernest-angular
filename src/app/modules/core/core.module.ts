@@ -2,23 +2,23 @@ import { ModuleWithProviders, NgModule, Optional, SkipSelf } from '@angular/core
 import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
-
-import { components } from './components';
-import { pages } from './pages';
-import { AppComponent } from '../../app.component';
 import { StoreModule } from '@ngrx/store';
-import { reducers, metaReducers } from '../../store';
-import { environment } from 'src/environments/environment';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { CounterHelper } from '../../store/counter/counter.helper';
 import { StoreRouterConnectingModule, RouterState } from '@ngrx/router-store';
-import { CounterEffects } from 'src/app/store/counter/counter.effects';
-import { SharedModule } from '../shared/shared.module';
-import { MaterialModule } from '../material.module';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+
+import { components } from './components';
+import { pages } from './pages';
+
+import { AppComponent } from '../../app.component';
+import { MaterialModule } from '../material.module';
+import { reducers, metaReducers } from '@store/index';
+import { environment } from '@env/environment';
+import { CounterHelper } from '@store/counter/counter.helper';
+import { CounterEffects } from '@store/counter/counter.effects';
 
 @NgModule({
   declarations: [AppComponent, ...components, ...pages],
@@ -30,7 +30,6 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
     !environment.production ? StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }) : [],
     StoreRouterConnectingModule.forRoot({ routerState: RouterState.Minimal }),
     EffectsModule.forRoot([CounterEffects]),
-    SharedModule,
     MaterialModule,
     HttpClientModule,
     TranslateModule.forRoot({

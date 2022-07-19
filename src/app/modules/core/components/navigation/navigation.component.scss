@@ -1,11 +1,12 @@
+@import '../../../../../scss/variables.scss';
+
 .navigation {
   position: absolute;
   left: 0;
   right: 0;
-  background: #0000007a;
+  background: $navBg;
 
   .navigation-buttons {
-    padding: 20px;
     display: flex;
     flex-direction: row;
     justify-content: center;
