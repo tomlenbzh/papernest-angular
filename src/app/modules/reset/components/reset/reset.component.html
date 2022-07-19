@@ -1,8 +1,10 @@
 <form class="reset-form" [formGroup]="form" (ngSubmit)="submitForm()">
+  <p>Only people above the age of 18 can reset the counter</p>
+
   <mat-form-field appearance="outline">
     <mat-label for="birthday">Quelle est votre date d'anniversaire ?</mat-label>
     <input type="date" matInput id="birthday" [formControlName]="controlNames.BIRTHDAY" />
-    <mat-error *ngIf="birthday?.invalid">{{ getErrorMessage() }}</mat-error>
+    <mat-error *ngIf="birthday?.invalid">{{ errorMessage }}</mat-error>
   </mat-form-field>
 
   <div class="form-actions">
