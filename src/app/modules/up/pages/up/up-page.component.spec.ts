@@ -3,7 +3,8 @@ import { CounterHelper } from 'src/app/store/counter/counter.helper';
 import { UpComponent } from '../../components/up/up.component';
 import { UpPageComponent } from './up-page.component';
 import { provideMockStore, MockStore } from '@ngrx/store/testing';
-import { SharedModule } from 'src/app/modules/shared/shared.module';
+import { TranslateModule } from '@ngx-translate/core';
+import { MaterialModule } from 'src/app/modules/material.module';
 
 describe('UpPageComponent', () => {
   let component: UpPageComponent;
@@ -15,7 +16,7 @@ describe('UpPageComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [UpPageComponent, UpComponent],
-      imports: [SharedModule],
+      imports: [TranslateModule.forRoot(), MaterialModule],
       providers: [provideMockStore({ initialState }), CounterHelper]
     }).compileComponents();
 

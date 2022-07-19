@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { SharedModule } from 'src/app/modules/shared/shared.module';
+import { TranslateModule } from '@ngx-translate/core';
+import { MaterialModule } from 'src/app/modules/material.module';
 import { DownComponent } from './down.component';
 
 describe('DownComponent', () => {
@@ -9,7 +10,7 @@ describe('DownComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [DownComponent],
-      imports: [SharedModule]
+      imports: [MaterialModule, TranslateModule.forRoot()]
     }).compileComponents();
   });
 

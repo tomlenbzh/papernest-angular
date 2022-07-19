@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { TranslateModule } from '@ngx-translate/core';
 import { CounterComponent } from './counter.component';
 
 describe('CounterComponent', () => {
@@ -7,7 +8,8 @@ describe('CounterComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [CounterComponent]
+      declarations: [CounterComponent],
+      imports: [TranslateModule.forRoot()]
     }).compileComponents();
   });
 
