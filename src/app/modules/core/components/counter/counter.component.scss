@@ -1,17 +1,21 @@
-.counter {
-  font-size: 100px;
-  line-height: 60px;
-  padding-top: 50px; // TODO > ADD VARIABLE
-}
+.counter-container {
+  padding-top: 100px;
 
-.counter-info {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 20px;
-  margin: 50px 0 30px;
+  .counter {
+    font-size: 100px;
+    line-height: 60px;
+    padding-top: 50px;
+  }
 
-  .value {
-    font-weight: 700;
+  .counter-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    margin: 50px 0 30px;
+
+    .value {
+      font-weight: 700;
+    }
   }
 }

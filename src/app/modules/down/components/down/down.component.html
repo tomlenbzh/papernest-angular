@@ -1,5 +1,9 @@
-<papernest-default-button
-  [label]="'DECREMENT !'"
-  [icon]="'remove'"
-  (clicked)="decrementCounter()"
-></papernest-default-button>
+<button
+  mat-raised-button
+  (click)="decrementCounter()"
+  [matTooltip]="'DOWN.TOOLTIP' | translate"
+  matTooltipPosition="below"
+>
+  <mat-icon aria-hidden="false">remove</mat-icon>
+  {{ 'DOWN.LABEL' | translate }}
+</button>

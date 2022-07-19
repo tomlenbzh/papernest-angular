@@ -10,7 +10,7 @@ export const initialState: CounterState = {
   counter: CounterBaseValue,
   increment: IncrementBaseValue,
   actions: ActionsBaseValue,
-  color: BgColors.BG_WHITE
+  color: BgColors.WHITE
 };
 
 export const counterReducer = createReducer(

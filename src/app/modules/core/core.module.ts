@@ -16,6 +16,9 @@ import { StoreRouterConnectingModule, RouterState } from '@ngrx/router-store';
 import { CounterEffects } from 'src/app/store/counter/counter.effects';
 import { SharedModule } from '../shared/shared.module';
 import { MaterialModule } from '../material.module';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 @NgModule({
   declarations: [AppComponent, ...components, ...pages],
@@ -28,7 +31,17 @@ import { MaterialModule } from '../material.module';
     StoreRouterConnectingModule.forRoot({ routerState: RouterState.Minimal }),
     EffectsModule.forRoot([CounterEffects]),
     SharedModule,
-    MaterialModule
+    MaterialModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      defaultLanguage: 'fr',
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      },
+      isolate: false
+    })
   ],
   providers: [CounterHelper]
 })
@@ -40,4 +53,9 @@ export class CoreModule {
   static forRoot(): ModuleWithProviders<any> {
     return { ngModule: CoreModule, providers: [] };
   }
+}
+
+// required for AOT compilation
+export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
+  return new TranslateHttpLoader(http);
 }

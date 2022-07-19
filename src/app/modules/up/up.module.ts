@@ -3,12 +3,13 @@ import { CommonModule } from '@angular/common';
 import { UpRoutingModule } from './up-routing.module';
 import { components } from './components';
 import { pages } from './pages';
-import { SharedModule } from '../shared/shared.module';
 import { CounterHelper } from 'src/app/store/counter/counter.helper';
+import { TranslateModule } from '@ngx-translate/core';
+import { MaterialModule } from '../material.module';
 
 @NgModule({
   declarations: [...pages, ...components],
-  imports: [CommonModule, UpRoutingModule, SharedModule],
+  imports: [CommonModule, UpRoutingModule, MaterialModule, TranslateModule.forChild()],
   providers: [CounterHelper]
 })
 export class UpModule {}

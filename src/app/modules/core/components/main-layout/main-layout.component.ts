@@ -27,15 +27,15 @@ export class MainLayoutComponent implements OnChanges {
    */
   private setBackground(color: string): void {
     switch (color) {
-      case BgColors.BG_WHITE:
+      case BgColors.WHITE:
         this.colorClass = '--white';
         break;
 
-      case BgColors.BG_RED:
+      case BgColors.RED:
         this.colorClass = '--red';
         break;
 
-      case BgColors.BG_GREEN:
+      case BgColors.GREEN:
         this.colorClass = '--green';
         break;
 

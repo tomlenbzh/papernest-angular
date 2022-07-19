@@ -1,34 +1,43 @@
 <div class="navigation">
-  <button
-    mat-raised-button
-    type="button"
-    [routerLink]="['/up']"
-    [disabled]="isOnUp"
-    [matTooltip]="!isOnUp ? 'Increment the counter' : 'You already are on that page'"
-    matTooltipPosition="below"
-  >
-    INCREMENT
-  </button>
+  <div class="navigation-buttons">
+    <button
+      mat-raised-button
+      type="button"
+      [routerLink]="['/up']"
+      [disabled]="isOnUp"
+      [textContent]="'NAVIGATION.UP' | translate"
+      [matTooltip]="'NAVIGATION.UP_TOOLTIP' | translate"
+      matTooltipPosition="below"
+    ></button>
 
-  <button
-    mat-raised-button
-    type="button"
-    [routerLink]="['/down']"
-    [disabled]="isOnDown"
-    [matTooltip]="!isOnUp ? 'Decrement the counter' : 'You already are on that page'"
-    matTooltipPosition="below"
-  >
-    DECREMENT
-  </button>
+    <button
+      mat-raised-button
+      type="button"
+      [routerLink]="['/down']"
+      [disabled]="isOnDown"
+      [textContent]="'NAVIGATION.DOWN' | translate"
+      [matTooltip]="'NAVIGATION.DOWN_TOOLTIP' | translate"
+      matTooltipPosition="below"
+    ></button>
 
-  <button
-    mat-raised-button
-    type="button"
-    [routerLink]="['/reset']"
-    [disabled]="isOnReset"
-    [matTooltip]="!isOnReset ? 'Reset the counter' : 'You already are on that page'"
-    matTooltipPosition="below"
-  >
-    RESET COUNTER
-  </button>
+    <button
+      mat-raised-button
+      type="button"
+      [routerLink]="['/reset']"
+      [disabled]="isOnReset"
+      [textContent]="'NAVIGATION.RESET' | translate"
+      [matTooltip]="'NAVIGATION.RESET_TOOLTIP' | translate"
+      matTooltipPosition="below"
+    ></button>
+
+    <div class="lang-block">
+      <img
+        *ngFor="let lang of acceptedLangs"
+        src="assets/images/{{ lang }}.png"
+        [attr.alt]="lang"
+        class="lang"
+        (click)="changeLanguage(lang)"
+      />
+    </div>
+  </div>
 </div>
