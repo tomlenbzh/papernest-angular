@@ -52,4 +52,8 @@ export class CounterHelper {
     const { counter, increment, actions, color } = state;
     this.store.dispatch(CounterActions.PresetState({ counter, increment, actions, color }));
   }
+
+  resetCounter(): void {
+    this.store.dispatch(CounterActions.ResetCounter());
+  }
 }
