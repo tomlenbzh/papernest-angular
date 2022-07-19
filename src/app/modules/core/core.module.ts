@@ -14,6 +14,8 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { CounterHelper } from '../../store/counter/counter.helper';
 import { StoreRouterConnectingModule, RouterState } from '@ngrx/router-store';
 import { CounterEffects } from 'src/app/store/counter/counter.effects';
+import { SharedModule } from '../shared/shared.module';
+import { MaterialModule } from '../material.module';
 
 @NgModule({
   declarations: [AppComponent, ...components, ...pages],
@@ -24,7 +26,9 @@ import { CounterEffects } from 'src/app/store/counter/counter.effects';
     StoreModule.forRoot(reducers, { metaReducers }),
     !environment.production ? StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }) : [],
     StoreRouterConnectingModule.forRoot({ routerState: RouterState.Minimal }),
-    EffectsModule.forRoot([CounterEffects])
+    EffectsModule.forRoot([CounterEffects]),
+    SharedModule,
+    MaterialModule
   ],
   providers: [CounterHelper]
 })

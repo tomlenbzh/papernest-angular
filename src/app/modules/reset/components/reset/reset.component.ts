@@ -18,18 +18,7 @@ export class ResetComponent implements OnInit {
     return this.form && this.form.get(this.controlNames.BIRTHDAY);
   }
 
-  constructor(private formBuilder: FormBuilder) {}
-
-  ngOnInit(): void {
-    this.createForm();
-  }
-
-  submitForm(): void {
-    if (!this.form.valid) return;
-    this.resetCounter.emit();
-  }
-
-  getErrorMessage(): string | null {
+  get errorMessage(): string | null {
     let value: string | null = null;
 
     if (this.birthday?.errors!['required']) {
@@ -41,6 +30,17 @@ export class ResetComponent implements OnInit {
     }
 
     return value;
+  }
+
+  constructor(private formBuilder: FormBuilder) {}
+
+  ngOnInit(): void {
+    this.createForm();
+  }
+
+  submitForm(): void {
+    if (!this.form.valid) return;
+    this.resetCounter.emit();
   }
 
   private createForm(): void {
