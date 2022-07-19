@@ -1,1 +1,11 @@
-<p>reset works!</p>
+<form class="reset-form" [formGroup]="form" (ngSubmit)="submitForm()">
+  <mat-form-field appearance="outline">
+    <mat-label for="birthday">Quelle est votre date d'anniversaire ?</mat-label>
+    <input type="date" matInput id="birthday" [formControlName]="controlNames.BIRTHDAY" />
+    <mat-error *ngIf="birthday?.invalid">{{ getErrorMessage() }}</mat-error>
+  </mat-form-field>
+
+  <div class="form-actions">
+    <button mat-raised-button type="submit" color="accent">Reset counter</button>
+  </div>
+</form>
